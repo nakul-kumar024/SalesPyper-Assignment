@@ -5,7 +5,7 @@ const Navbar = ({ tenantName, role }) => {
   return (
     <nav className="flex items-center justify-between w-full text-black py-4 px-5 md:px-8 bg-white shadow-sm">
       {/* Logo */}
-      <div className="flex-shrink-0">
+      <div className="shrink-0">
         <Link href="/">
           <div className="text-2xl sm:text-3xl font-bold tracking-tight cursor-pointer">
             SalesPypyer
