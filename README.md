@@ -104,7 +104,7 @@ Although full optimization is out of scope, the project follows good frontend pr
 
 ---
 
-## ✅ Conclusion
+##  Conclusion
 
 This project demonstrates a clear understanding of:
 - Frontend architecture
