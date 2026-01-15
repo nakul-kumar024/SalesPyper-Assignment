@@ -1,41 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Multi-Tenant Sales Dashboard (Frontend)
 
-## Getting Started
+This project is a frontend-only implementation of a Multi-tenant sales dashboard, built as part of a frontend developer assignment.  
+The focus of this project is on **application structure, role-based access, tenant separation, and frontend fundamentals**, rather than backend or feature completeness.
 
-First, run the development server:
+A live demo and source code are provided below.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Live Demo
+ Link: https://sales-pyper-assignment.vercel.app/
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+##  GitHub Repository
+ Link: https://github.com/nakul-kumar024/SalesPyper-Assignment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+##  Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js (App Router)**
+- **React**
+- **JavaScript**
+- **Tailwind CSS / basic CSS**
+- **Mocked data (no backend)**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+##  Multi-Tenant Handling
 
-## Deploy on Vercel
+The application simulates a SaaS product used by multiple organizations (tenants).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Two tenants are supported: **Organization A** and **Organization B**
+- Each tenant has its own isolated data for:
+  - Leads
+  - Call Logs
+- Switching the tenant updates all visible data across the application
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Tenant data is handled using centralized mock data to simulate how a backend API would normally work.
 
+---
 
+##  Role-Based Access Control (RBAC)
 
+Two user roles are supported:
 
-<!-- “The project uses Next.js App Router for improved structure and scalability.” -->
+### Admin
+- Can view all data
+- Can perform write actions (mocked) such as deleting leads
+
+### Agent
+- View-only access
+- Cannot modify or delete data
+
+Role switching is mocked via a dropdown and affects UI behavior immediately.
+
+---
+
+##  Core Features
+
+### Leads Module
+- Displays a list of leads (name, phone, status)
+- Filter leads by status
+- Tenant-specific data
+- Admin-only delete action (mock write operation)
+- Agent has read-only access
+
+### Call Logs Module
+- Displays call history (lead name, time, duration, outcome)
+- Tenant-specific data
+- Optional filtering for better usability
+- Handles empty states clearly
+
+---
+
+##  UI & UX Decisions
+
+- A **dynamic navbar** displays the active organization and role to provide clear global context
+- Tenant and role switching controls are kept separate for clarity
+- Minimal and functional UI as per assignment scope
+- Gradient navbar and footer added for basic visual polish without overengineering
+
+---
+
+##  Frontend Optimization (Approach)
+
+Although full optimization is out of scope, the project follows good frontend practices:
+
+- Modular and reusable components
+- Clear separation of concerns
+- Centralized state handling at the page level
+- Ready for future enhancements such as:
+  - Lazy loading
+  - Memoization
+  - API-based data fetching
+
+---
+
+## ℹ️ Notes & Limitations
+
+- Authentication is mocked as per assignment instructions
+- No backend or database is implemented
+- All write operations are handled locally in the UI
+- Data resets when switching tenants, simulating a fresh backend fetch
+
+---
+
+## ✅ Conclusion
+
+This project demonstrates a clear understanding of:
+- Frontend architecture
+- Multi-tenant handling
+- Role-based access control
+- Scalable component structure
+
+The goal was to build a **clean, understandable, and extensible frontend**, rather than a fully production-ready system.
+
+This project was developed as part of a frontend assignment to demonstrate practical frontend engineering skills.
