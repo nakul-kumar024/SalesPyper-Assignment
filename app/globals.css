@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+nav{
+  background: #dce6e2;
+  background: linear-gradient(260deg, rgba(220, 230, 226, 1) 30%, rgba(102, 115, 110, 1) 80%);
+}
+
+footer{
+  background: #dce6e2;
+background: linear-gradient(97deg, rgba(220, 230, 226, 1) 30%, rgba(102, 115, 110, 1) 80%);
+
+}
+
+
