@@ -7,7 +7,7 @@ export default function Switcher({ tenant, setTenant, role, setRole }) {
         Tenant & Role Switcher
       </h3>
 
-      {/* Tenant Selector */}
+      
       <div className="mb-4 flex items-center">
         <label className="mr-3 font-medium text-gray-700">Tenant:</label>
         <select
@@ -20,7 +20,7 @@ export default function Switcher({ tenant, setTenant, role, setRole }) {
         </select>
       </div>
 
-      {/* Role Selector */}
+      
       <div className="flex items-center">
         <label className="mr-3 font-medium text-gray-700">Role:</label>
         <select

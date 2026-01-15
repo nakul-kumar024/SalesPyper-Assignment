@@ -9,16 +9,16 @@ import CallLogs from "@/Components/CallLogs";
 import Layout from "@/Components/Layout";
 
 export default function HomePage() {
-  // 🔑 Central state
+  
   const [tenant, setTenant] = useState("orgA");
   const [role, setRole] = useState("Admin");
 
-  // 🔄 Tenant-specific data
+  
   const tenantData = mockData[tenant];
 
   return (
     <Layout tenantName={tenantData.name} role={role}>
-      {/* Tenant & Role Switcher */}
+      
       <Switcher
         tenant={tenant}
         setTenant={setTenant}
@@ -26,13 +26,13 @@ export default function HomePage() {
         setRole={setRole}
       />
 
-      {/* Leads Module */}
+      
       <Leads
         leads={tenantData.leads}
         role={role}
       />
 
-      {/* Call Logs Module */}
+      
       <CallLogs
         callLogs={tenantData.callLogs}
       />

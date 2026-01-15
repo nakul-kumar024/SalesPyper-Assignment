@@ -4,7 +4,7 @@ import Link from "next/link";
 const Navbar = ({ tenantName, role }) => {
   return (
     <nav className="flex items-center justify-between w-full text-black py-4 px-5 md:px-8 bg-white shadow-sm">
-      {/* Logo */}
+      
       <div className="shrink-0">
         <Link href="/">
           <div className="text-2xl sm:text-3xl font-bold tracking-tight cursor-pointer">
@@ -13,7 +13,7 @@ const Navbar = ({ tenantName, role }) => {
         </Link>
       </div>
 
-      {/* Info section - becomes more compact on small screens */}
+      
       <div className="flex items-center gap-5 sm:gap-8 md:gap-10">
         <div className="hidden sm:flex items-center gap-8 text-base md:text-lg font-medium">
           <div>
@@ -26,7 +26,7 @@ const Navbar = ({ tenantName, role }) => {
           </div>
         </div>
 
-        {/* Mobile version - compact pills or single line */}
+        
         <div className="sm:hidden flex flex-col items-end text-sm font-medium">
           <div className="text-gray-600">
             {tenantName?.length > 18

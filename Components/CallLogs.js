@@ -14,7 +14,7 @@ export default function CallLogs({ callLogs }) {
     <div className="mb-8 p-6 border border-gray-200 rounded-xl shadow-sm bg-white">
       <h3 className="text-lg font-semibold mb-4 text-gray-800">Call Logs</h3>
 
-      {/* Optional Filter */}
+      
       <select
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
